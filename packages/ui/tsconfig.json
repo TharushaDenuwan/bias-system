@@ -1,0 +1,12 @@
+{
+  "extends": "@repo/typescript-config/react-library",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "paths": {
+      "@repo/ui/*": ["./src/*"]
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}
