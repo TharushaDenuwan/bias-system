@@ -4,31 +4,4 @@ export * from "./tasks.schema";
 
 export * from "./media.schema";
 
-export * from "./hotel.schema";
-
-export * from "./room.schema";
-
-export * from "./room-rates.schema";
-
-export * from "./room-availability.schema";
-
-export * from "./booking.schema";
-
-export * from "./villa.schema";
-
-export * from "./admin-payment.schema";
-
-export * from "./hotel-payment.schema";
-
-export * from "./restaurant.schema";
-
 export * from "./article.schema";
-
-export * from "./restaurant-table.schema";
-export * from "./reviewNrating.schema";
-
-export * from "./ads.schema";
-
-export * from "./wishlist.schema";
-
-export * from "./destination.schema";
