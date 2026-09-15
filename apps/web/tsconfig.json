@@ -1,6 +1,7 @@
 {
   // "extends": "@repo/typescript-config/nextjs", // Removed invalid extends
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "paths": {
       "@/*": ["./src/*"],
       "@repo/ui/*": ["../../packages/ui/src/*"],
