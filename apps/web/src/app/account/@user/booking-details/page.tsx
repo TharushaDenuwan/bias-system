@@ -1,6 +1,5 @@
 "use client";
 
-import UserBookingListing from "@/features/user/user-booking/user-listing";
 import PageContainer from "@/modules/layouts/page-container";
 import { AppPageShell } from "@/modules/layouts/page-shell";
 import { Dialog } from "@repo/ui/components/dialog";
@@ -22,7 +21,6 @@ export default function RoomBookingManagementPage() {
         />
 
         <Separator />
-        <UserBookingListing />
       </div>
     </PageContainer>
   );

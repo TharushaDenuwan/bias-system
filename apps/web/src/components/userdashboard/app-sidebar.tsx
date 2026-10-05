@@ -76,16 +76,8 @@ const data = {
       url: "/account/wishlist",
       icon: IconBox,
     },
-    {
-      name: "Profile",
-      url: "/account/profile",
-      icon: IconBox,
-    },
-    // {
-    //   name: "Manage Payments",
-    //   url: "/account/payment-details",
-    //   icon: IconBox,
-    // },
+
+
   ],
   userManagement: [
     {
