@@ -36,3 +36,12 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Python & Machine Learning artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env/
+*.joblib
+

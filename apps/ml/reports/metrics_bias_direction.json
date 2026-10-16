@@ -1,0 +1,137 @@
+{
+  "word_tfidf_logreg": {
+    "target": "Bias Direction",
+    "model_name": "word_tfidf_logreg",
+    "train_samples": 32,
+    "test_samples": 8,
+    "accuracy": 0.5,
+    "macro_precision": 0.5,
+    "macro_recall": 0.5,
+    "macro_f1": 0.4444,
+    "weighted_f1": 0.4167,
+    "per_class_metrics": {
+      "Anti-Government": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 2.0
+      },
+      "Neutral": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 3.0
+      },
+      "Pro-Government": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1-score": 0.4444444444444444,
+        "support": 8.0
+      },
+      "weighted avg": {
+        "precision": 0.4375,
+        "recall": 0.5,
+        "f1-score": 0.41666666666666663,
+        "support": 8.0
+      }
+    },
+    "confusion_matrix_image": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\reports\\confusion_matrix_bias_direction_word_tfidf_logreg.png"
+  },
+  "char_tfidf_logreg": {
+    "target": "Bias Direction",
+    "model_name": "char_tfidf_logreg",
+    "train_samples": 32,
+    "test_samples": 8,
+    "accuracy": 0.625,
+    "macro_precision": 0.5,
+    "macro_recall": 0.6667,
+    "macro_f1": 0.5556,
+    "weighted_f1": 0.5,
+    "per_class_metrics": {
+      "Anti-Government": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 2.0
+      },
+      "Neutral": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1-score": 0.6666666666666666,
+        "support": 3.0
+      },
+      "Pro-Government": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "accuracy": 0.625,
+      "macro avg": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1-score": 0.5555555555555555,
+        "support": 8.0
+      },
+      "weighted avg": {
+        "precision": 0.4375,
+        "recall": 0.625,
+        "f1-score": 0.5,
+        "support": 8.0
+      }
+    },
+    "confusion_matrix_image": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\reports\\confusion_matrix_bias_direction_char_tfidf_logreg.png"
+  },
+  "char_tfidf_linear_svm": {
+    "target": "Bias Direction",
+    "model_name": "char_tfidf_linear_svm",
+    "train_samples": 32,
+    "test_samples": 8,
+    "accuracy": 0.5,
+    "macro_precision": 0.5,
+    "macro_recall": 0.5556,
+    "macro_f1": 0.5111,
+    "weighted_f1": 0.475,
+    "per_class_metrics": {
+      "Anti-Government": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1-score": 0.8,
+        "support": 2.0
+      },
+      "Neutral": {
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.4,
+        "support": 3.0
+      },
+      "Pro-Government": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.3333333333333333,
+        "support": 3.0
+      },
+      "accuracy": 0.5,
+      "macro avg": {
+        "precision": 0.49999999999999994,
+        "recall": 0.5555555555555555,
+        "f1-score": 0.5111111111111112,
+        "support": 8.0
+      },
+      "weighted avg": {
+        "precision": 0.47916666666666663,
+        "recall": 0.5,
+        "f1-score": 0.47500000000000003,
+        "support": 8.0
+      }
+    },
+    "confusion_matrix_image": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\reports\\confusion_matrix_bias_direction_char_tfidf_linear_svm.png"
+  }
+}
