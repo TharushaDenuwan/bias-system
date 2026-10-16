@@ -1,7 +1,7 @@
 {
   "target": "Bias Direction",
   "best_model_name": "char_tfidf_logreg",
-  "macro_f1": 0.5555555555555555,
+  "macro_f1": 0.5847222222222223,
   "classes": [
     "Anti-Government",
     "Neutral",
@@ -11,44 +11,44 @@
   "metrics": {
     "target": "Bias Direction",
     "model_name": "char_tfidf_logreg",
-    "train_samples": 32,
-    "test_samples": 8,
-    "accuracy": 0.625,
-    "macro_precision": 0.5,
-    "macro_recall": 0.6667,
-    "macro_f1": 0.5556,
-    "weighted_f1": 0.5,
+    "train_samples": 400,
+    "test_samples": 100,
+    "accuracy": 0.64,
+    "macro_precision": 0.624,
+    "macro_recall": 0.5944,
+    "macro_f1": 0.5847,
+    "weighted_f1": 0.6353,
     "per_class_metrics": {
       "Anti-Government": {
-        "precision": 1.0,
-        "recall": 1.0,
-        "f1-score": 1.0,
-        "support": 2.0
+        "precision": 0.5306122448979592,
+        "recall": 0.8387096774193549,
+        "f1-score": 0.65,
+        "support": 31.0
       },
       "Neutral": {
-        "precision": 0.5,
-        "recall": 1.0,
-        "f1-score": 0.6666666666666666,
-        "support": 3.0
+        "precision": 0.7857142857142857,
+        "recall": 0.6111111111111112,
+        "f1-score": 0.6875,
+        "support": 54.0
       },
       "Pro-Government": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1-score": 0.0,
-        "support": 3.0
+        "precision": 0.5555555555555556,
+        "recall": 0.3333333333333333,
+        "f1-score": 0.4166666666666667,
+        "support": 15.0
       },
-      "accuracy": 0.625,
+      "accuracy": 0.64,
       "macro avg": {
-        "precision": 0.5,
-        "recall": 0.6666666666666666,
-        "f1-score": 0.5555555555555555,
-        "support": 8.0
+        "precision": 0.6239606953892668,
+        "recall": 0.5943847072879331,
+        "f1-score": 0.5847222222222223,
+        "support": 100.0
       },
       "weighted avg": {
-        "precision": 0.4375,
-        "recall": 0.625,
-        "f1-score": 0.5,
-        "support": 8.0
+        "precision": 0.672108843537415,
+        "recall": 0.64,
+        "f1-score": 0.6352500000000001,
+        "support": 100.0
       }
     },
     "confusion_matrix_image": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\reports\\confusion_matrix_bias_direction_char_tfidf_logreg.png"

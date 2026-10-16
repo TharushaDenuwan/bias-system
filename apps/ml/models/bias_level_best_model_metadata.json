@@ -1,7 +1,7 @@
 {
   "target": "Bias Level",
-  "best_model_name": "char_tfidf_linear_svm",
-  "macro_f1": 0.3380952380952381,
+  "best_model_name": "char_tfidf_logreg",
+  "macro_f1": 0.35534447821681864,
   "classes": [
     "High",
     "Low",
@@ -11,53 +11,53 @@
   "model_path": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\models\\bias_level_best_model.joblib",
   "metrics": {
     "target": "Bias Level",
-    "model_name": "char_tfidf_linear_svm",
-    "train_samples": 32,
-    "test_samples": 8,
-    "accuracy": 0.375,
-    "macro_precision": 0.3958,
-    "macro_recall": 0.3333,
-    "macro_f1": 0.3381,
-    "weighted_f1": 0.3738,
+    "model_name": "char_tfidf_logreg",
+    "train_samples": 400,
+    "test_samples": 100,
+    "accuracy": 0.48,
+    "macro_precision": 0.3573,
+    "macro_recall": 0.3569,
+    "macro_f1": 0.3553,
+    "weighted_f1": 0.486,
     "per_class_metrics": {
       "High": {
-        "precision": 0.0,
-        "recall": 0.0,
-        "f1-score": 0.0,
-        "support": 1.0
+        "precision": 0.2222222222222222,
+        "recall": 0.18181818181818182,
+        "f1-score": 0.2,
+        "support": 11.0
       },
       "Low": {
-        "precision": 0.25,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.2857142857142857,
-        "support": 3.0
+        "precision": 0.3333333333333333,
+        "recall": 0.34782608695652173,
+        "f1-score": 0.3404255319148936,
+        "support": 23.0
       },
       "Medium": {
-        "precision": 1.0,
-        "recall": 0.5,
-        "f1-score": 0.6666666666666666,
-        "support": 2.0
+        "precision": 0.1875,
+        "recall": 0.25,
+        "f1-score": 0.21428571428571427,
+        "support": 12.0
       },
       "Neutral": {
-        "precision": 0.3333333333333333,
-        "recall": 0.5,
-        "f1-score": 0.4,
-        "support": 2.0
+        "precision": 0.6862745098039216,
+        "recall": 0.6481481481481481,
+        "f1-score": 0.6666666666666666,
+        "support": 54.0
       },
-      "accuracy": 0.375,
+      "accuracy": 0.48,
       "macro avg": {
-        "precision": 0.3958333333333333,
-        "recall": 0.3333333333333333,
-        "f1-score": 0.3380952380952381,
-        "support": 8.0
+        "precision": 0.3573325163398693,
+        "recall": 0.35694810423071294,
+        "f1-score": 0.35534447821681864,
+        "support": 100.0
       },
       "weighted avg": {
-        "precision": 0.4270833333333333,
-        "recall": 0.375,
-        "f1-score": 0.3738095238095238,
-        "support": 8.0
+        "precision": 0.49419934640522883,
+        "recall": 0.48,
+        "f1-score": 0.48601215805471126,
+        "support": 100.0
       }
     },
-    "confusion_matrix_image": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\reports\\confusion_matrix_bias_level_char_tfidf_linear_svm.png"
+    "confusion_matrix_image": "C:\\Disc D\\IIT\\Final Year\\FYP\\Code\\bias-system\\apps\\ml\\reports\\confusion_matrix_bias_level_char_tfidf_logreg.png"
   }
 }
