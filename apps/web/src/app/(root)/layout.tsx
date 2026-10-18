@@ -1,5 +1,5 @@
 import { Footer } from "@/modules/layouts/footer";
-import { Navbar } from "@/modules/layouts/navbar";
+import { Navbar } from "@/modules/landing/navbar";
 import { ReactNode } from "react";
 
 interface RootLayoutProps {

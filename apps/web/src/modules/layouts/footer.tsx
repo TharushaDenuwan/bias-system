@@ -33,7 +33,7 @@ export function Footer() {
 
       {/* Top Section: Research Digest Newsletter */}
       <div className="border-b border-slate-800/80 bg-slate-900/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="w-full max-w-[1720px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-10">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-3">
               <Sparkles className="w-3.5 h-3.5" />
@@ -75,7 +75,7 @@ export function Footer() {
       </div>
 
       {/* Main Footer Links & Directory */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="w-full max-w-[1720px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
           {/* Column 1: Project Identity & Scope (Spans 2 cols on lg) */}
           <div className="lg:col-span-2 space-y-4">
@@ -229,7 +229,7 @@ export function Footer() {
 
       {/* Bottom Bar: Copyright & Research Disclaimer */}
       <div className="border-t border-slate-800/80 bg-slate-950/90">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="w-full max-w-[1720px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
             <div>
               <p>
