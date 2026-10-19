@@ -6,9 +6,9 @@ import { Toaster } from "sonner";
 import { fontHeading, fontSans } from "../lib/fonts";
 
 export const metadata: Metadata = {
-  title: "Bloonsoo.com",
+  title: "MediaBias.LK — ML-Based Bias Analysis of Sri Lankan Television News",
   description:
-    "Welcome to Bloonsoo.com, your one-stop destination for all your travel needs. Explore, book, and enjoy your perfect getaway.",
+    "An academic research platform providing real-time Sinhala NLP inference to detect political alignment and framing severity in Sri Lankan broadcast news. Developed as an IIT / UoW Final Year Project.",
 };
 
 export default function RootLayout({

@@ -52,30 +52,30 @@ interface PredictionOutput {
 const PRESET_EXAMPLES = [
   {
     title: "Anti-Government Criticism",
-    sinhalaTitle: "විපක්ෂ විවේචනය (Anti-Gov)",
-    category: "Anti-Government",
-    badgeColor: "border-rose-500/40 text-rose-300 bg-rose-500/10",
+    sinhalaTitle: "විපක්ෂ විවේචනය",
+    category: "Anti-Gov",
+    badgeStyle: "bg-[#1C2D38] text-[#89989F] border-[#2D4A5A]",
     text: "ගොවීන්ට වෙලාවට පොහොර ටික දෙන්නවත් බැරි තරමට මේ ආණ්ඩුව අසමත් බවත් රට දැඩි ආර්ථික අර්බුදයකට ඇද දමා ඇති බවත් විපක්ෂ නායකවරයා දැඩි ලෙස පවසයි.",
   },
   {
     title: "Pro-Government Development",
-    sinhalaTitle: "රාජ්‍ය සංවර්ධනය (Pro-Gov)",
-    category: "Pro-Government",
-    badgeColor: "border-sky-500/40 text-sky-300 bg-sky-500/10",
+    sinhalaTitle: "රාජ්‍ය සංවර්ධනය",
+    category: "Pro-Gov",
+    badgeStyle: "bg-[#1C2D38] text-[#89989F] border-[#2D4A5A]",
     text: "ජනාධිපතිතුමා නව ආර්ථික සංවර්ධන ව්‍යාපෘති රැසක් ජනතා අයිතියට පත් කරමින් රට ස්ථාවරත්වයට ගෙන ඒමට රජය කඩිනම් ක්‍රියාමාර්ග ගන්නා බව ප්‍රකාශ කළේය.",
   },
   {
-    title: "Neutral Central Bank Policy",
-    sinhalaTitle: "මහ බැංකු වාර්තාව (Neutral)",
+    title: "Neutral Central Bank Report",
+    sinhalaTitle: "මහ බැංකු වාර්තාව",
     category: "Neutral",
-    badgeColor: "border-emerald-500/40 text-emerald-300 bg-emerald-500/10",
+    badgeStyle: "bg-[#1C2D38] text-[#89989F] border-[#2D4A5A]",
     text: "ශ්‍රී ලංකා මහ බැංකුව විසින් ප්‍රතිපත්තිමය පොලී අනුපාතික නොවෙනස්ව පවත්වා ගැනීමට අද දින තීරණය කළ අතර උද්ධමනය පාලනය වී ඇති බව නිවේදනය කළේය.",
   },
   {
-    title: "High Controversy Dispute",
-    sinhalaTitle: "දූෂණ විරෝධය (High Bias)",
+    title: "High-Bias Controversy",
+    sinhalaTitle: "දූෂණ විරෝධය",
     category: "High Bias",
-    badgeColor: "border-amber-500/40 text-amber-300 bg-amber-500/10",
+    badgeStyle: "bg-[#1C2D38] text-[#89989F] border-[#2D4A5A]",
     text: "දූෂිත දේශපාලන අධිකාරිය මහජන ධනය කොල්ලකෑම වහා නතර කළ යුතු බවට සිවිල් සංවිධාන සහ වෘත්තීය සමිති කොළඹදී දැවැන්ත විරෝධතාවක් පැවැත්වූහ.",
   },
 ];
@@ -228,69 +228,66 @@ export function Hero() {
     }
   };
 
-  // Helper colors for Direction label
+  // Direction label helper — monochrome MongoDB style
   const getDirectionBadge = (label?: string) => {
     switch (label?.toLowerCase()) {
       case "anti-government":
         return {
           title: "Anti-Government",
           sinhala: "ආණ්ඩු විරෝධී / විවේචනාත්මක",
-          badge: "bg-rose-500/15 text-rose-300 border-rose-500/40 shadow-rose-500/10",
-          barColor: "bg-rose-500",
-          ring: "ring-rose-500/30",
+          badge: "bg-[#3D1515] text-[#FF6B6B] border-[#7A2E2E]",
+          barColor: "bg-[#FF6B6B]",
         };
       case "pro-government":
         return {
           title: "Pro-Government",
           sinhala: "ආණ්ඩු හිතවාදී / සහයෝගී",
-          badge: "bg-sky-500/15 text-sky-300 border-sky-500/40 shadow-sky-500/10",
-          barColor: "bg-sky-500",
-          ring: "ring-sky-500/30",
+          badge: "bg-[#0D2D3D] text-[#00ED64] border-[#1C4D5A]",
+          barColor: "bg-[#00ED64]",
         };
       default:
         return {
           title: "Neutral",
           sinhala: "මධ්‍යස්ථ / කරුණුමය",
-          badge: "bg-emerald-500/15 text-emerald-300 border-emerald-500/40 shadow-emerald-500/10",
-          barColor: "bg-emerald-500",
-          ring: "ring-emerald-500/30",
+          badge: "bg-[#1C2D38] text-[#89989F] border-[#2D4A5A]",
+          barColor: "bg-[#89989F]",
         };
     }
   };
 
-  // Helper colors for Level label
+  // Level label helper — monochrome MongoDB style
   const getLevelBadge = (label?: string) => {
     switch (label?.toLowerCase()) {
       case "high":
         return {
           title: "High Severity",
           sinhala: "ඉහළ පක්ෂග්‍රාහීත්වය",
-          badge: "bg-rose-500/15 text-rose-300 border-rose-500/40 shadow-rose-500/10",
-          barColor: "bg-rose-500",
+          badge: "bg-[#3D1515] text-[#FF6B6B] border-[#7A2E2E]",
+          barColor: "bg-[#FF6B6B]",
           desc: "Substantial emotional or partisan framing detected in language.",
         };
       case "medium":
         return {
           title: "Medium Severity",
           sinhala: "මධ්‍යම පක්ෂග්‍රාහීත්වය",
-          badge: "bg-amber-500/15 text-amber-300 border-amber-500/40 shadow-amber-500/10",
-          barColor: "bg-amber-500",
+          badge: "bg-[#2D2010] text-[#F5A623] border-[#5A3E10]",
+          barColor: "bg-[#F5A623]",
           desc: "Noticeable political slant or selective topic emphasis.",
         };
       case "low":
         return {
           title: "Low Severity",
           sinhala: "අඩු පක්ෂග්‍රාහීත්වය",
-          badge: "bg-blue-500/15 text-blue-300 border-blue-500/40 shadow-blue-500/10",
-          barColor: "bg-blue-500",
+          badge: "bg-[#0D2D3D] text-[#00D4FF] border-[#1C4D5A]",
+          barColor: "bg-[#00D4FF]",
           desc: "Minor stylistic framing with mostly objective information.",
         };
       default:
         return {
           title: "Neutral / Balanced",
           sinhala: "මධ්‍යස්ථ / අපක්ෂපාතී",
-          badge: "bg-emerald-500/15 text-emerald-300 border-emerald-500/40 shadow-emerald-500/10",
-          barColor: "bg-emerald-500",
+          badge: "bg-[#0D2D1A] text-[#00ED64] border-[#1C4D2A]",
+          barColor: "bg-[#00ED64]",
           desc: "No significant partisan slant or emotional bias detected.",
         };
     }
@@ -305,163 +302,145 @@ export function Hero() {
   const charCount = inputText.length;
 
   return (
-    <div className="relative w-full overflow-hidden bg-slate-950 text-slate-100">
-      {/* Background Radiant Tech Glows */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-15%,rgba(14,165,233,0.18),rgba(2,6,23,0))]" />
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-indigo-600/10 blur-[140px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/3 -left-40 w-[450px] h-[450px] bg-cyan-600/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute top-1/2 -right-40 w-[450px] h-[450px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none" />
+    <div className="relative w-full bg-[#001E2B] text-white min-h-screen">
+      {/* Subtle background texture — single very faint glow, no neon */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,237,100,0.04),transparent)] pointer-events-none" />
 
-      {/* Grid Pattern Overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.035] pointer-events-none"
-        style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #38bdf8 1px, transparent 0)`,
-          backgroundSize: "32px 32px",
-        }}
-      />
+      {/* ── MAIN CONTENT ─────────────────────────────────────────────── */}
+      <div className="relative w-full max-w-[1720px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-28 pb-20 lg:pt-32 lg:pb-28">
 
-      <div className="relative w-full max-w-[1720px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-10 pt-8 pb-20 lg:pt-12 lg:pb-28">
-        {/* Top Research Pill Header */}
-        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 shadow-inner backdrop-blur-md">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        {/* ── HERO HEADER ────────────────────────────────────────────── */}
+        <div className="text-center max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto mb-14">
+          {/* Status pills */}
+          <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0D2D1A] border border-[#1C4D2A] text-[11px] font-medium text-[#00ED64] tracking-wide">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#00ED64] animate-pulse" />
+              Live ML Inference
             </span>
-            <span className="text-xs font-semibold uppercase tracking-wider text-slate-300">
-              Machine Learning Bias Analysis
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C2D38] border border-[#2D4A5A] text-[11px] font-medium text-[#89989F] tracking-wide">
+              <BrainCircuit className="w-3 h-3" />
+              Sinhala NLP Pipeline
             </span>
-            <span className="text-slate-600">|</span>
-            <span className="text-xs text-cyan-400 font-medium flex items-center gap-1">
-              <BrainCircuit className="w-3.5 h-3.5" /> Sinhala Unicode NLP Pipeline
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#1C2D38] border border-[#2D4A5A] text-[11px] font-medium text-[#89989F] tracking-wide">
+              IIT Sri Lanka · FYP
             </span>
           </div>
 
-          <Badge
-            variant="outline"
-            className="border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs py-1 px-3 font-mono"
-          >
-            Informatics Institute of Technology (IIT) • FYP
-          </Badge>
-        </div>
-
-        {/* Project Hero Header */}
-        <div className="text-center max-w-5xl lg:max-w-6xl xl:max-w-7xl mx-auto mb-12">
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white leading-tight">
-            Machine Learning-Based{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 bg-clip-text text-transparent">
-              Bias Analysis & Prediction
-            </span>{" "}
-            of Sri Lankan Television News
+          {/* Main heading */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-[4rem] font-bold tracking-tight text-white leading-[1.15]">
+            Machine Learning-Based Bias Analysis
+            <br />
+            <span className="text-[#00ED64]">&amp; Prediction</span>
+            {" "}of Sri Lankan Television News
           </h1>
-          <p className="mt-5 text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl lg:max-w-4xl xl:max-w-5xl mx-auto leading-relaxed">
+
+          <p className="mt-5 text-sm sm:text-base lg:text-lg text-[#89989F] max-w-3xl mx-auto leading-relaxed font-normal">
             An academic research platform providing real-time natural language inference to detect
-            political alignment (<span className="text-cyan-300 font-medium">Bias Direction</span>) and
-            framing severity (<span className="text-sky-300 font-medium">Bias Level</span>) across Sinhala news text.
+            political alignment (<span className="text-white font-medium">Bias Direction</span>) and
+            framing severity (<span className="text-white font-medium">Bias Level</span>) across Sinhala broadcast news text.
           </p>
 
-          {/* Quick Architecture Feature Badges */}
-          <div className="mt-6 flex flex-wrap justify-center items-center gap-3 text-xs sm:text-sm text-slate-400">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
-              <Cpu className="w-3.5 h-3.5 text-cyan-400" /> TF-IDF Char/Word n-gram Pipelines
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
-              <Scale className="w-3.5 h-3.5 text-emerald-400" /> Calibrated Class Probabilities (Platt Scaling)
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800">
-              <Binary className="w-3.5 h-3.5 text-purple-400" /> Sinhala ZWJ Unicode Normalization
-            </span>
+          {/* Feature tags */}
+          <div className="mt-8 flex flex-wrap justify-center items-center gap-2 text-[11px] text-[#89989F]">
+            {[
+              { icon: <Cpu className="w-3 h-3" />, label: "TF-IDF Char/Word n-gram Pipelines" },
+              { icon: <Scale className="w-3 h-3" />, label: "Platt-Calibrated Class Probabilities" },
+              { icon: <Binary className="w-3 h-3" />, label: "Sinhala ZWJ Unicode Normalization" },
+            ].map((tag) => (
+              <span key={tag.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-[#112733] border border-[#1C2D38] font-medium">
+                {tag.icon}
+                {tag.label}
+              </span>
+            ))}
           </div>
         </div>
 
-        {/* ============================================================== */}
-        {/* INTERACTIVE BIAS DETECTION WORKBENCH (id="detector")          */}
-        {/* ============================================================== */}
-        <section
-          id="detector"
-          className="scroll-mt-20 rounded-2xl bg-gradient-to-b from-slate-900/90 to-slate-950/95 border border-slate-800/90 shadow-2xl backdrop-blur-xl p-5 sm:p-7 lg:p-8 xl:p-9 relative"
-        >
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        {/*  INTERACTIVE BIAS DETECTION WORKBENCH  (id="detector")         */}
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        <section id="detector" className="scroll-mt-20">
           <div id="classifier" className="absolute -top-20 left-0 pointer-events-none" />
-          {/* Workbench Header */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-slate-800">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shadow-sm">
-                <Sparkles className="w-4 h-4 fill-current" />
-              </div>
-              <div>
-                <h2 className="text-base sm:text-lg font-bold text-white tracking-wide">
-                  Live Bias Prediction Console
-                </h2>
-                <p className="text-xs text-slate-400">
-                  Input Sinhala news headlines, statements, or broadcast transcripts to run live model inference.
-                </p>
-              </div>
-            </div>
 
-            <div className="flex items-center gap-2">
-              <span className="text-[11px] font-mono px-2.5 py-1 rounded bg-slate-800/80 text-cyan-300 border border-slate-700">
-                ACTIVE MODEL: Char/Word TF-IDF + LogReg
-              </span>
-            </div>
-          </div>
+          {/* Card wrapper */}
+          <div className="rounded-2xl bg-[#112733] border border-[#1C2D38] shadow-xl overflow-hidden">
 
-          {/* Quick-load Presets */}
-          <div className="pt-5 pb-3">
-            <div className="text-xs font-semibold text-slate-400 mb-2.5 flex items-center justify-between">
-              <span>Quick-Load Verified Research Samples:</span>
-              <span className="text-[11px] text-slate-500 hidden sm:inline">
-                Click any preset to test immediately
-              </span>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 xl:gap-4">
-              {PRESET_EXAMPLES.map((preset, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => {
-                    setInputText(preset.text);
-                    executePrediction(preset.text);
-                  }}
-                  className="text-left p-3 sm:p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800/80 border border-slate-800 hover:border-cyan-500/40 transition-all duration-200 group cursor-pointer shadow-sm hover:shadow-md"
-                >
-                  <div className="flex items-center justify-between gap-2 mb-1.5">
-                    <span className="text-xs font-semibold text-slate-200 group-hover:text-cyan-300 transition-colors truncate">
-                      {preset.title}
-                    </span>
-                    <span
-                      className={`text-[9px] px-1.5 py-0.5 rounded font-mono border shrink-0 ${preset.badgeColor}`}
-                    >
-                      {preset.category}
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-slate-400 line-clamp-2 leading-relaxed">
-                    {preset.text}
+            {/* Card header bar */}
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-6 py-4 border-b border-[#1C2D38] bg-[#0D1F28]">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-lg bg-[#001E2B] border border-[#1C2D38] flex items-center justify-center">
+                  <Sparkles className="w-4 h-4 text-[#00ED64]" />
+                </div>
+                <div>
+                  <h2 className="text-sm font-semibold text-white">Live Bias Prediction Console</h2>
+                  <p className="text-[11px] text-[#5C6C75] mt-0.5">
+                    Input Sinhala news text to run live model inference
                   </p>
-                </button>
-              ))}
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#001E2B] border border-[#1C2D38] text-[10px] font-mono text-[#89989F] shrink-0">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#00ED64]" />
+                Char/Word TF-IDF + LogReg
+              </span>
             </div>
-          </div>
 
-          {/* Core Grid: Text Input Area (Left 7 Cols ~58%) + Real-time Results (Right 5 Cols ~42%) */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-8 pt-4">
-            {/* Left 7 Columns: Input Console (58% width on desktop) */}
-            <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
-              <div className="space-y-2.5">
-                <div className="flex items-center justify-between text-xs text-slate-400">
-                  <label htmlFor="sinhala-input" className="font-medium text-slate-300">
-                    Sinhala News Text (සිංහල පුවත් පෙළ):
+            {/* Quick-load presets */}
+            <div className="px-6 pt-5 pb-4">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-[11px] font-semibold text-[#5C6C75] uppercase tracking-wider">
+                  Quick-Load Research Samples
+                </span>
+                <span className="text-[11px] text-[#3D5A6A] hidden sm:inline">
+                  Click any sample to test immediately
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                {PRESET_EXAMPLES.map((preset, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setInputText(preset.text);
+                      executePrediction(preset.text);
+                    }}
+                    className="group text-left p-3.5 rounded-xl bg-[#001E2B] border border-[#1C2D38] hover:border-[#2D4A5A] hover:bg-[#0D2535] transition-all duration-150 cursor-pointer"
+                  >
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <span className="text-xs font-semibold text-white group-hover:text-[#00ED64] transition-colors leading-tight">
+                        {preset.title}
+                      </span>
+                      <span className={`shrink-0 text-[9px] px-1.5 py-0.5 rounded font-mono border ${preset.badgeStyle}`}>
+                        {preset.category}
+                      </span>
+                    </div>
+                    <p className="text-[10px] text-[#5C6C75] line-clamp-2 leading-relaxed font-normal">
+                      {preset.text}
+                    </p>
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-[#1C2D38]" />
+
+            {/* Main 2-column grid: Input + Diagnostics */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+
+              {/* LEFT: Text input panel (7/12) */}
+              <div className="lg:col-span-7 p-6 lg:border-r border-[#1C2D38] flex flex-col gap-4">
+
+                {/* Label row */}
+                <div className="flex items-center justify-between">
+                  <label htmlFor="sinhala-input" className="text-xs font-semibold text-[#89989F]">
+                    Sinhala News Text <span className="font-normal text-[#3D5A6A]">(සිංහල පුවත් පෙළ)</span>
                   </label>
-                  <div className="flex items-center gap-3 text-[11px] font-mono">
-                    <span>
-                      Words: <strong className="text-slate-200">{wordCount}</strong>
-                    </span>
-                    <span>
-                      Chars: <strong className="text-slate-200">{charCount}</strong>
-                    </span>
+                  <div className="flex items-center gap-3 text-[10px] font-mono text-[#3D5A6A]">
+                    <span>Words: <strong className="text-[#89989F]">{wordCount}</strong></span>
+                    <span>Chars: <strong className="text-[#89989F]">{charCount}</strong></span>
                   </div>
                 </div>
 
-                <div className="relative">
+                {/* Textarea */}
+                <div className="relative flex-1">
                   <textarea
                     id="sinhala-input"
                     value={inputText}
@@ -469,421 +448,326 @@ export function Hero() {
                     onKeyDown={handleKeyDown}
                     rows={7}
                     placeholder="මෙතැනට සිංහල පුවත් සිරස්තලයක් හෝ ප්‍රකාශයක් ඇතුළත් කරන්න (Enter Sinhala news headline or statement here)..."
-                    className="w-full p-4 rounded-xl bg-slate-950 border border-slate-800 text-slate-100 placeholder-slate-600 text-sm leading-relaxed focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition resize-y font-sans shadow-inner min-h-[175px]"
+                    className="w-full p-4 rounded-xl bg-[#001E2B] border border-[#1C2D38] text-white placeholder-[#3D5A6A] text-sm leading-relaxed focus:outline-none focus:border-[#2D4A5A] focus:ring-1 focus:ring-[#00ED64]/30 transition resize-y font-sans min-h-[175px]"
                   />
                   {inputText && (
                     <button
                       onClick={() => setInputText("")}
-                      className="absolute top-3 right-3 text-slate-500 hover:text-slate-300 p-1 rounded bg-slate-900/80 hover:bg-slate-800 text-xs transition"
-                      title="Clear Text"
+                      className="absolute top-3 right-3 text-[#3D5A6A] hover:text-[#89989F] p-1.5 rounded-md bg-[#112733] hover:bg-[#1C2D38] transition cursor-pointer"
+                      title="Clear"
                     >
                       <RotateCcw className="w-3.5 h-3.5" />
                     </button>
                   )}
                 </div>
 
+                {/* Error state */}
                 {errorMsg && (
-                  <div className="p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 shrink-0 text-rose-400" />
+                  <div className="p-3 rounded-lg bg-[#2D1515] border border-[#7A2E2E] text-[#FF6B6B] text-xs flex items-center gap-2">
+                    <AlertTriangle className="w-4 h-4 shrink-0" />
                     <span>{errorMsg}</span>
                   </div>
                 )}
-              </div>
 
-              {/* Action Buttons Toolbar */}
-              <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
-                {/* File Upload Option */}
-                <div className="flex items-center gap-2">
-                  <input
-                    ref={fileInputRef}
-                    type="file"
-                    accept=".txt"
-                    onChange={handleFileUpload}
-                    className="hidden"
-                  />
-                  <Button
-                    type="button"
-                    variant="outline"
-                    size="sm"
-                    onClick={() => fileInputRef.current?.click()}
-                    className="border-slate-800 bg-slate-900/60 hover:bg-slate-800 text-slate-300 text-xs h-9 px-3 gap-1.5"
+                {/* Action bar */}
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept=".txt"
+                      onChange={handleFileUpload}
+                      className="hidden"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => fileInputRef.current?.click()}
+                      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-md text-xs font-medium text-[#89989F] bg-[#001E2B] border border-[#1C2D38] hover:border-[#2D4A5A] hover:text-white transition cursor-pointer"
+                    >
+                      <Upload className="w-3.5 h-3.5" />
+                      Upload .txt
+                    </button>
+                    <span className="text-[10px] text-[#3D5A6A] hidden sm:inline">
+                      Press <kbd className="px-1.5 py-0.5 rounded bg-[#1C2D38] font-mono text-[9px] text-[#89989F]">Ctrl+Enter</kbd> to analyze
+                    </span>
+                  </div>
+
+                  <button
+                    onClick={() => executePrediction(inputText)}
+                    disabled={analyzing}
+                    className="inline-flex items-center gap-2 px-5 py-2 rounded-md text-xs font-semibold bg-[#00ED64] text-[#001E2B] hover:bg-[#00D957] transition-colors duration-200 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer shadow-sm"
                   >
-                    <Upload className="w-3.5 h-3.5 text-slate-400" />
-                    <span>Upload .txt News</span>
-                  </Button>
-
-                  <span className="text-[11px] text-slate-500 hidden sm:inline">
-                    Press <kbd className="px-1.5 py-0.5 rounded bg-slate-800 font-mono text-[10px]">Ctrl+Enter</kbd> to analyze
-                  </span>
+                    {analyzing ? (
+                      <>
+                        <span className="animate-spin h-3.5 w-3.5 border-2 border-[#001E2B] border-t-transparent rounded-full" />
+                        Classifying...
+                      </>
+                    ) : (
+                      <>
+                        <Play className="w-3.5 h-3.5 fill-current" />
+                        Predict Bias
+                      </>
+                    )}
+                  </button>
                 </div>
 
-                {/* Submit Inference Button */}
-                <Button
-                  onClick={() => executePrediction(inputText)}
-                  disabled={analyzing}
-                  size="default"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-xs h-9 px-5 shadow-lg shadow-cyan-500/20 rounded-lg cursor-pointer"
-                >
-                  {analyzing ? (
-                    <span className="flex items-center gap-2">
-                      <span className="animate-spin h-3.5 w-3.5 border-2 border-slate-950 border-t-transparent rounded-full" />
-                      Classifying News Text...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      <Play className="w-3.5 h-3.5 fill-current" />
-                      Predict Bias & Direction
-                    </span>
-                  )}
-                </Button>
+                {/* Preprocessing note */}
+                <div className="p-3 rounded-lg bg-[#001E2B] border border-[#1C2D38] text-[10px] text-[#5C6C75] flex items-start gap-2">
+                  <Info className="w-3.5 h-3.5 text-[#3D5A6A] shrink-0 mt-0.5" />
+                  <span>
+                    <strong className="text-[#89989F]">Sinhala Preprocessing:</strong> Automatically normalizes Zero-Width Joiners (ZWJ), replaces irregular diacritics, strips punctuation, and cleans sublinear character sequences via{" "}
+                    <code className="text-[#89989F] font-mono">clean_sinhala_text()</code> before inference.
+                  </span>
+                </div>
               </div>
 
-              {/* Preprocessing Unicode Info Note */}
-              <div className="p-3 rounded-lg bg-slate-900/40 border border-slate-800/80 text-[11px] text-slate-400 flex items-start gap-2">
-                <Info className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
-                <span>
-                  <strong>Sinhala Preprocessing:</strong> Automatically normalizes Zero-Width Joiners (ZWJ),
-                  replaces irregular diacritics, strips punctuation, and cleans sublinear character sequences
-                  via <code className="text-slate-300 font-mono">clean_sinhala_text()</code> before inference.
-                </span>
-              </div>
-            </div>
+              {/* RIGHT: Inference diagnostics panel (5/12) */}
+              <div className="lg:col-span-5 p-6 flex flex-col gap-4 bg-[#0D1F28]">
 
-            {/* Right 5 Columns: Real-Time Prediction Results Output Card (42% width on desktop) */}
-            <div className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-6 rounded-2xl bg-slate-900/80 border border-cyan-500/25 relative overflow-hidden shadow-xl">
-              <div className="absolute top-0 right-0 w-48 h-48 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none" />
-
-              <div className="space-y-4">
-                {/* Result Card Title & Copy Button */}
-                <div className="flex items-center justify-between pb-3.5 border-b border-slate-800">
+                {/* Panel header */}
+                <div className="flex items-center justify-between pb-3.5 border-b border-[#1C2D38]">
                   <div className="flex items-center gap-2">
-                    <Cpu className="w-4 h-4 text-cyan-400" />
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-200">
+                    <Cpu className="w-4 h-4 text-[#00ED64]" />
+                    <span className="text-xs font-semibold text-white uppercase tracking-wide">
                       Inference Diagnostics
                     </span>
                   </div>
                   {result && (
                     <button
                       onClick={handleCopyJson}
-                      className="text-[11px] px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center gap-1.5 transition cursor-pointer"
-                      title="Copy Raw Prediction JSON"
+                      className="inline-flex items-center gap-1.5 text-[10px] px-2.5 py-1 rounded-md bg-[#112733] hover:bg-[#1C2D38] text-[#89989F] border border-[#1C2D38] hover:border-[#2D4A5A] transition cursor-pointer"
+                      title="Copy JSON"
                     >
                       {copied ? (
-                        <>
-                          <Check className="w-3 h-3 text-emerald-400" />
-                          <span className="text-emerald-400">Copied</span>
-                        </>
+                        <><Check className="w-3 h-3 text-[#00ED64]" /><span className="text-[#00ED64]">Copied</span></>
                       ) : (
-                        <>
-                          <Copy className="w-3 h-3 text-slate-400" />
-                          <span>Copy JSON</span>
-                        </>
+                        <><Copy className="w-3 h-3" /><span>Copy JSON</span></>
                       )}
                     </button>
                   )}
                 </div>
 
+                {/* Loading state */}
                 {analyzing ? (
-                  <div className="py-14 flex flex-col items-center justify-center text-center space-y-3">
-                    <div className="animate-spin h-9 w-9 border-3 border-cyan-400 border-t-transparent rounded-full" />
-                    <div className="text-xs text-slate-300 font-medium">
-                      Executing Character n-gram TF-IDF Matrix...
-                    </div>
-                    <div className="text-[11px] text-slate-500">
-                      Applying calibrated multi-class decision boundary
-                    </div>
+                  <div className="flex-1 flex flex-col items-center justify-center py-12 space-y-3 text-center">
+                    <div className="animate-spin h-9 w-9 border-2 border-[#1C2D38] border-t-[#00ED64] rounded-full" />
+                    <div className="text-xs font-medium text-white">Running TF-IDF Classification...</div>
+                    <div className="text-[11px] text-[#5C6C75]">Applying calibrated multi-class boundary</div>
                   </div>
+
+                /* Result state */
                 ) : result?.status === "success" ? (
-                  <div className="space-y-4">
-                    {/* 1. PREDICTED BIAS DIRECTION */}
+                  <div className="space-y-4 flex-1">
+
+                    {/* Bias Direction result */}
                     {directionData && (
-                      <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-3">
+                      <div className="rounded-xl bg-[#001E2B] border border-[#1C2D38] p-4 space-y-3">
                         <div className="flex items-center justify-between">
-                          <span className="text-xs text-slate-400 font-medium">
-                            1. Bias Direction (දේශපාලන පෙළගැස්ම):
+                          <span className="text-[11px] font-semibold text-[#5C6C75] uppercase tracking-wider">
+                            Bias Direction
                           </span>
-                          <span
-                            className={`px-3 py-1 rounded-full text-xs font-bold border ${directionMeta.badge}`}
-                          >
+                          <span className={`px-2.5 py-1 rounded-md text-xs font-semibold border ${directionMeta.badge}`}>
                             {directionData.predicted_label}
                           </span>
                         </div>
+                        <div className="text-xs text-[#89989F]">{directionMeta.sinhala}</div>
 
-                        <div className="text-xs text-slate-300 font-medium">
-                          {directionMeta.sinhala}
+                        {directionData.class_probabilities && (
+                          <div className="pt-2 border-t border-[#1C2D38] space-y-2">
+                            <div className="text-[10px] font-mono text-[#3D5A6A] uppercase tracking-wider">
+                              Calibrated Probabilities
+                            </div>
+                            {Object.entries(directionData.class_probabilities).map(([cls, prob]) => {
+                              const percent = Math.round(prob * 100);
+                              const isCurrent = cls === directionData.predicted_label;
+                              return (
+                                <div key={cls} className="space-y-1">
+                                  <div className="flex justify-between text-[11px]">
+                                    <span className={isCurrent ? "text-white font-semibold" : "text-[#5C6C75]"}>{cls}</span>
+                                    <span className={isCurrent ? "text-white font-mono font-semibold" : "text-[#3D5A6A] font-mono"}>{percent}%</span>
+                                  </div>
+                                  <div className="w-full h-1 rounded-full bg-[#1C2D38] overflow-hidden">
+                                    <div
+                                      style={{ width: `${percent}%` }}
+                                      className={`h-full rounded-full transition-all duration-500 ${isCurrent ? directionMeta.barColor : "bg-[#2D4A5A]"}`}
+                                    />
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Bias Level result */}
+                    {levelData && (
+                      <div className="rounded-xl bg-[#001E2B] border border-[#1C2D38] p-4 space-y-3">
+                        <div className="flex items-center justify-between">
+                          <span className="text-[11px] font-semibold text-[#5C6C75] uppercase tracking-wider">
+                            Bias Severity Level
+                          </span>
+                          <span className={`px-2.5 py-1 rounded-md text-xs font-semibold border ${levelMeta.badge}`}>
+                            {levelData.predicted_label}
+                          </span>
+                        </div>
+                        <div className="text-xs text-[#89989F]">
+                          {levelMeta.sinhala} <span className="text-[#5C6C75]">· {levelMeta.desc}</span>
                         </div>
 
-                        {/* Probability Breakdown for Direction */}
-                        {directionData.class_probabilities && (
-                          <div className="pt-2 border-t border-slate-900 space-y-2">
-                            <div className="text-[10px] text-slate-400 uppercase font-mono tracking-wider">
-                              Calibrated Probabilities:
+                        {levelData.class_probabilities && (
+                          <div className="pt-2 border-t border-[#1C2D38] space-y-2">
+                            <div className="text-[10px] font-mono text-[#3D5A6A] uppercase tracking-wider">
+                              Severity Distribution
                             </div>
-                            {Object.entries(directionData.class_probabilities).map(
-                              ([cls, prob]) => {
+                            <div className="grid grid-cols-2 xl:grid-cols-4 gap-2">
+                              {Object.entries(levelData.class_probabilities).map(([cls, prob]) => {
                                 const percent = Math.round(prob * 100);
-                                const isCurrent = cls === directionData.predicted_label;
+                                const isCurrent = cls === levelData.predicted_label;
                                 return (
-                                  <div key={cls} className="space-y-1">
-                                    <div className="flex justify-between text-xs">
-                                      <span
-                                        className={
-                                          isCurrent
-                                            ? "text-cyan-300 font-semibold"
-                                            : "text-slate-400"
-                                        }
-                                      >
-                                        {cls}
-                                      </span>
-                                      <span
-                                        className={
-                                          isCurrent
-                                            ? "text-cyan-300 font-mono font-bold"
-                                            : "text-slate-500 font-mono"
-                                        }
-                                      >
-                                        {percent}%
-                                      </span>
+                                  <div
+                                    key={cls}
+                                    className={`p-2.5 rounded-lg border text-left transition ${
+                                      isCurrent
+                                        ? "bg-[#0D2D1A] border-[#1C4D2A] text-[#00ED64]"
+                                        : "bg-[#112733] border-[#1C2D38] text-[#5C6C75]"
+                                    }`}
+                                  >
+                                    <div className="text-[10px] uppercase font-mono flex justify-between">
+                                      <span>{cls}</span>
+                                      <span className="font-semibold">{percent}%</span>
                                     </div>
-                                    <div className="w-full h-1.5 rounded-full bg-slate-800 overflow-hidden">
+                                    <div className="w-full h-1 rounded-full bg-[#1C2D38] mt-1.5 overflow-hidden">
                                       <div
                                         style={{ width: `${percent}%` }}
-                                        className={`h-full rounded-full transition-all duration-500 ${
-                                          isCurrent ? directionMeta.barColor : "bg-slate-600"
-                                        }`}
+                                        className={`h-full ${isCurrent ? levelMeta.barColor : "bg-[#2D4A5A]"}`}
                                       />
                                     </div>
                                   </div>
                                 );
-                              }
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    )}
-
-                    {/* 2. PREDICTED BIAS LEVEL */}
-                    {levelData && (
-                      <div className="p-4 rounded-xl bg-slate-950/80 border border-slate-800/90 space-y-3">
-                        <div className="flex items-center justify-between">
-                          <span className="text-xs text-slate-400 font-medium">
-                            2. Bias Severity Level (පක්ෂග්‍රාහීත්ව මට්ටම):
-                          </span>
-                          <span
-                            className={`px-3 py-1 rounded-full text-xs font-bold border ${levelMeta.badge}`}
-                          >
-                            {levelData.predicted_label}
-                          </span>
-                        </div>
-
-                        <div className="text-xs text-slate-300 font-medium">
-                          {levelMeta.sinhala} •{" "}
-                          <span className="text-slate-400">{levelMeta.desc}</span>
-                        </div>
-
-                        {/* Probability Breakdown for Level */}
-                        {levelData.class_probabilities && (
-                          <div className="pt-2 border-t border-slate-900 space-y-2">
-                            <div className="text-[10px] text-slate-400 uppercase font-mono tracking-wider">
-                              Severity Distribution:
-                            </div>
-                            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-2.5">
-                              {Object.entries(levelData.class_probabilities).map(
-                                ([cls, prob]) => {
-                                  const percent = Math.round(prob * 100);
-                                  const isCurrent = cls === levelData.predicted_label;
-                                  return (
-                                    <div
-                                      key={cls}
-                                      className={`p-2.5 rounded-lg border text-left ${
-                                        isCurrent
-                                          ? "bg-slate-900 border-cyan-500/40 text-cyan-200"
-                                          : "bg-slate-950 border-slate-800 text-slate-400"
-                                      }`}
-                                    >
-                                      <div className="text-[10px] uppercase font-mono flex justify-between">
-                                        <span>{cls}</span>
-                                        <span className="font-bold">{percent}%</span>
-                                      </div>
-                                      <div className="w-full h-1 rounded-full bg-slate-800 mt-1.5 overflow-hidden">
-                                        <div
-                                          style={{ width: `${percent}%` }}
-                                          className={`h-full ${
-                                            isCurrent ? "bg-cyan-400" : "bg-slate-600"
-                                          }`}
-                                        />
-                                      </div>
-                                    </div>
-                                  );
-                                }
-                              )}
+                              })}
                             </div>
                           </div>
                         )}
                       </div>
                     )}
                   </div>
+
+                /* Empty state */
                 ) : (
-                  <div className="py-14 text-center text-xs text-slate-500 space-y-3">
-                    <div className="w-12 h-12 rounded-xl bg-slate-800/60 border border-slate-700/60 flex items-center justify-center mx-auto text-slate-500">
-                      <FileText className="w-6 h-6 text-slate-400" />
+                  <div className="flex-1 flex flex-col items-center justify-center py-12 text-center space-y-3">
+                    <div className="w-12 h-12 rounded-xl bg-[#112733] border border-[#1C2D38] flex items-center justify-center">
+                      <FileText className="w-5 h-5 text-[#3D5A6A]" />
                     </div>
-                    <p className="font-medium text-slate-300">Ready for Live Inference</p>
-                    <p className="text-[11px] text-slate-400 max-w-sm mx-auto leading-relaxed">
-                      Enter Sinhala news text on the left or select a sample preset above to preview model predictions and confidence distributions.
+                    <div className="text-sm font-semibold text-[#89989F]">Ready for Inference</div>
+                    <p className="text-[11px] text-[#5C6C75] max-w-xs leading-relaxed">
+                      Enter Sinhala news text or select a research sample above to preview model predictions and probability distributions.
                     </p>
                   </div>
                 )}
-              </div>
 
-              {/* Research Disclaimer & Ethics Footer */}
-              <div className="mt-4 pt-3 border-t border-slate-800 text-[10px] text-slate-400 leading-relaxed space-y-1">
-                <div className="flex items-center gap-1.5 text-slate-400 font-semibold">
-                  <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>Academic Research Disclaimer</span>
+                {/* Research disclaimer footer */}
+                <div className="pt-3 mt-auto border-t border-[#1C2D38] text-[10px] text-[#3D5A6A] leading-relaxed space-y-1">
+                  <div className="flex items-center gap-1.5 text-[#5C6C75] font-semibold">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#3D5A6A]" />
+                    Academic Research Disclaimer
+                  </div>
+                  <p>
+                    Model probabilities reflect statistical patterns from training annotations and{" "}
+                    <strong className="text-[#5C6C75]">never</strong> represent verified factual truth or definitive proof of bias.
+                  </p>
                 </div>
-                <p className="text-slate-400">
-                  Model probabilities represent statistical linguistic patterns learned from training
-                  annotations and <strong>never</strong> represent verified factual truth or definitive
-                  proof of bias.
-                </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ============================================================== */}
-        {/* MODEL EVALUATION BENCHMARK SUITE (id="evaluation")             */}
-        {/* ============================================================== */}
-        <section id="evaluation" className="scroll-mt-20 mt-16 pt-10 border-t border-slate-800/80 relative">
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        {/*  MODEL EVALUATION BENCHMARK SUITE  (id="evaluation")           */}
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        <section id="evaluation" className="scroll-mt-20 mt-20 pt-12 border-t border-[#1C2D38] relative">
           <div id="sentiment" className="absolute -top-20 left-0 pointer-events-none" />
           <div id="airtime" className="absolute -top-20 left-0 pointer-events-none" />
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
+
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs font-mono mb-2">
-                <BarChart3 className="w-3.5 h-3.5" />
-                <span>Empirical Verification Suite</span>
-              </div>
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#0D2D1A] border border-[#1C4D2A] text-[10px] font-semibold text-[#00ED64] uppercase tracking-widest mb-3">
+                <BarChart3 className="w-3 h-3" />
+                Empirical Verification
+              </span>
               <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
                 Model Performance & Evaluation Metrics
               </h2>
-              <p className="text-xs sm:text-sm text-slate-400 mt-1">
-                Evaluation results generated by <code className="text-slate-300 font-mono">evaluate.py</code> on 500 validated test samples.
+              <p className="text-xs text-[#5C6C75] mt-1.5 max-w-xl">
+                Results generated by <code className="text-[#89989F] font-mono">evaluate.py</code> on 500 validated test samples.
               </p>
             </div>
 
-            {/* Target Tab Switcher */}
-            <div className="flex p-1 rounded-xl bg-slate-900 border border-slate-800 self-start sm:self-auto">
-              <button
-                onClick={() => setActiveEvalTab("direction")}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition ${
-                  activeEvalTab === "direction"
-                    ? "bg-cyan-500 text-slate-950 shadow"
-                    : "text-slate-400 hover:text-slate-200"
-                }`}
-              >
-                Bias Direction (Alignment)
-              </button>
-              <button
-                onClick={() => setActiveEvalTab("level")}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition ${
-                  activeEvalTab === "level"
-                    ? "bg-cyan-500 text-slate-950 shadow"
-                    : "text-slate-400 hover:text-slate-200"
-                }`}
-              >
-                Bias Level (Severity)
-              </button>
+            {/* Tab switcher */}
+            <div className="flex p-0.5 rounded-lg bg-[#112733] border border-[#1C2D38] self-start">
+              {(["direction", "level"] as const).map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveEvalTab(tab)}
+                  className={`px-4 py-1.5 rounded-md text-xs font-semibold transition-all cursor-pointer ${
+                    activeEvalTab === tab
+                      ? "bg-[#00ED64] text-[#001E2B] shadow-sm"
+                      : "text-[#89989F] hover:text-white"
+                  }`}
+                >
+                  {tab === "direction" ? "Bias Direction" : "Bias Level"}
+                </button>
+              ))}
             </div>
           </div>
 
-          {/* Metric Highlights Strip */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 xl:gap-6 mb-8">
-            <div className="p-4 xl:p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Best Accuracy</div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono mt-1">
-                {activeEvalTab === "direction" ? "91.4%" : "88.8%"}
+          {/* Metric cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {[
+              { label: "Best Accuracy", value: activeEvalTab === "direction" ? "91.4%" : "88.8%", sub: "Word TF-IDF + LogReg", color: "text-[#00ED64]" },
+              { label: "Macro F1-Score", value: activeEvalTab === "direction" ? "90.0%" : "86.7%", sub: "Balanced multi-class", color: "text-white" },
+              { label: "Weighted F1-Score", value: activeEvalTab === "direction" ? "91.4%" : "88.8%", sub: "Class-frequency weighted", color: "text-white" },
+              { label: "Test Set Samples", value: "500", sub: "100% verified ground truth", color: "text-white" },
+            ].map((card) => (
+              <div key={card.label} className="p-4 xl:p-5 rounded-xl bg-[#112733] border border-[#1C2D38]">
+                <div className="text-[11px] text-[#5C6C75] font-medium mb-1">{card.label}</div>
+                <div className={`text-2xl sm:text-3xl font-bold font-mono ${card.color}`}>{card.value}</div>
+                <div className="text-[10px] text-[#3D5A6A] mt-1">{card.sub}</div>
               </div>
-              <div className="text-[11px] text-slate-500 mt-1">Word TF-IDF + LogReg</div>
-            </div>
-
-            <div className="p-4 xl:p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Macro F1-Score</div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono mt-1">
-                {activeEvalTab === "direction" ? "90.0%" : "86.7%"}
-              </div>
-              <div className="text-[11px] text-slate-500 mt-1">Balanced multi-class</div>
-            </div>
-
-            <div className="p-4 xl:p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Weighted F1-Score</div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono mt-1">
-                {activeEvalTab === "direction" ? "91.4%" : "88.8%"}
-              </div>
-              <div className="text-[11px] text-slate-500 mt-1">Class-frequency weighted</div>
-            </div>
-
-            <div className="p-4 xl:p-5 rounded-xl bg-slate-900/60 border border-slate-800">
-              <div className="text-xs text-slate-400 font-medium">Test Set Samples</div>
-              <div className="text-2xl sm:text-3xl font-extrabold text-purple-400 font-mono mt-1">
-                500
-              </div>
-              <div className="text-[11px] text-slate-500 mt-1">100% verified ground truth</div>
-            </div>
+            ))}
           </div>
 
-          {/* Evaluation Table */}
-          <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/50 shadow-inner">
+          {/* Evaluation table */}
+          <div className="overflow-x-auto rounded-xl border border-[#1C2D38] bg-[#112733]">
             <table className="w-full text-left text-xs">
-              <thead className="bg-slate-900/90 text-slate-400 font-mono uppercase text-[11px] border-b border-slate-800">
+              <thead className="bg-[#0D1F28] text-[#5C6C75] font-mono uppercase text-[10px] tracking-wider border-b border-[#1C2D38]">
                 <tr>
-                  <th className="py-3.5 px-4 xl:px-6">Model Pipeline</th>
-                  <th className="py-3.5 px-4 xl:px-6">Accuracy</th>
-                  <th className="py-3.5 px-4 xl:px-6">Macro F1</th>
-                  <th className="py-3.5 px-4 xl:px-6">Weighted F1</th>
-                  <th className="py-3.5 px-4 xl:px-6">Macro Precision</th>
-                  <th className="py-3.5 px-4 xl:px-6">Macro Recall</th>
-                  <th className="py-3.5 px-4 xl:px-6">Evaluation Status</th>
+                  {["Model Pipeline", "Accuracy", "Macro F1", "Weighted F1", "Precision", "Recall", "Status"].map((h) => (
+                    <th key={h} className="py-3.5 px-4 xl:px-5 font-semibold">{h}</th>
+                  ))}
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-800/60 font-sans">
+              <tbody className="divide-y divide-[#1C2D38]">
                 {EVAL_SUMMARY.filter((row) =>
-                  activeEvalTab === "direction"
-                    ? row.target === "Bias Direction"
-                    : row.target === "Bias Level"
+                  activeEvalTab === "direction" ? row.target === "Bias Direction" : row.target === "Bias Level"
                 ).map((row, idx) => (
-                  <tr
-                    key={idx}
-                    className={`hover:bg-slate-800/40 transition ${
-                      row.isBest ? "bg-cyan-500/5" : ""
-                    }`}
-                  >
-                    <td className="py-4 px-4 xl:px-6 font-semibold text-slate-200 flex items-center gap-2">
-                      <span>{row.model}</span>
+                  <tr key={idx} className={`hover:bg-[#0D1F28] transition ${row.isBest ? "bg-[#0D2D1A]/30" : ""}`}>
+                    <td className="py-4 px-4 xl:px-5 font-semibold text-white flex items-center gap-2">
+                      {row.model}
                       {row.isBest && (
-                        <span className="px-1.5 py-0.2 rounded text-[10px] font-mono font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/40">
-                          TOP BENCHMARK
+                        <span className="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-[#00ED64]/10 text-[#00ED64] border border-[#00ED64]/30">
+                          BEST
                         </span>
                       )}
                     </td>
-                    <td className="py-4 px-4 xl:px-6 font-mono font-bold text-white">
-                      {row.accuracy.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-4 xl:px-6 font-mono text-cyan-300 font-semibold">
-                      {row.macroF1.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-4 xl:px-6 font-mono text-emerald-300 font-semibold">
-                      {row.weightedF1.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-4 xl:px-6 font-mono text-slate-300">
-                      {row.precision.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-4 xl:px-6 font-mono text-slate-300">
-                      {row.recall.toFixed(1)}%
-                    </td>
-                    <td className="py-4 px-4 xl:px-6">
-                      <span className="inline-flex items-center gap-1 text-[11px] text-emerald-400 font-medium">
-                        <CheckCircle2 className="w-3.5 h-3.5" /> Converged (500 samples)
+                    <td className="py-4 px-4 xl:px-5 font-mono font-bold text-white">{row.accuracy.toFixed(1)}%</td>
+                    <td className="py-4 px-4 xl:px-5 font-mono text-[#00ED64] font-semibold">{row.macroF1.toFixed(1)}%</td>
+                    <td className="py-4 px-4 xl:px-5 font-mono text-[#89989F] font-semibold">{row.weightedF1.toFixed(1)}%</td>
+                    <td className="py-4 px-4 xl:px-5 font-mono text-[#89989F]">{row.precision.toFixed(1)}%</td>
+                    <td className="py-4 px-4 xl:px-5 font-mono text-[#89989F]">{row.recall.toFixed(1)}%</td>
+                    <td className="py-4 px-4 xl:px-5">
+                      <span className="inline-flex items-center gap-1 text-[11px] text-[#00ED64] font-medium">
+                        <CheckCircle2 className="w-3.5 h-3.5" /> Converged
                       </span>
                     </td>
                   </tr>
@@ -893,120 +777,110 @@ export function Hero() {
           </div>
         </section>
 
-        {/* ============================================================== */}
-        {/* NLP PIPELINE ARCHITECTURE (id="pipelines")                      */}
-        {/* ============================================================== */}
-        <section id="pipelines" className="mt-16 pt-10 border-t border-slate-800/80">
-          <div className="max-w-4xl mb-8">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono mb-2">
-              <Binary className="w-3.5 h-3.5" />
-              <span>Machine Learning Methodology</span>
-            </div>
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        {/*  NLP PIPELINE ARCHITECTURE  (id="pipelines")                    */}
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        <section id="pipelines" className="mt-20 pt-12 border-t border-[#1C2D38]">
+          <div className="max-w-3xl mb-10">
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#0D2D38] border border-[#1C4D5A] text-[10px] font-semibold text-[#89989F] uppercase tracking-widest mb-3">
+              <Binary className="w-3 h-3" />
+              Machine Learning Methodology
+            </span>
             <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
               Four-Stage Natural Language Processing Architecture
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1">
+            <p className="text-xs text-[#5C6C75] mt-1.5">
               Engineered specifically for agglutinative Sinhala syntax and broadcast news framing analysis.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
-            {/* Stage 1 */}
-            <div className="p-5 xl:p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition">
-              <div className="w-9 h-9 rounded-lg bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-3 font-mono font-bold text-sm">
-                01
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-5">
+            {[
+              {
+                stage: "01",
+                color: "text-[#00ED64]",
+                bg: "bg-[#0D2D1A]",
+                border: "border-[#1C4D2A]",
+                title: "Sinhala Normalization",
+                body: "Normalizes Zero-Width Joiners (ZWJ \\u200D), removes extraneous whitespace, and regularizes kombuva/al-lakuna combinations in Sinhala Unicode.",
+              },
+              {
+                stage: "02",
+                color: "text-[#89989F]",
+                bg: "bg-[#1C2D38]",
+                border: "border-[#2D4A5A]",
+                title: "Sub-word & Character n-grams",
+                body: "Extracts character 3–5 n-grams and word 1–2 n-grams with sublinear TF scaling to capture morphological roots and political keywords.",
+              },
+              {
+                stage: "03",
+                color: "text-[#89989F]",
+                bg: "bg-[#1C2D38]",
+                border: "border-[#2D4A5A]",
+                title: "Decoupled Target Modeling",
+                body: "Independent classifiers with balanced class weights for Bias Direction (Anti/Neutral/Pro-Gov) and Bias Level (Neutral/Low/Med/High).",
+              },
+              {
+                stage: "04",
+                color: "text-[#00ED64]",
+                bg: "bg-[#0D2D1A]",
+                border: "border-[#1C4D2A]",
+                title: "Platt Scaling Calibration",
+                body: "Cross-validated probability calibration (CalibratedClassifierCV) so predicted probabilities reflect genuine confidence distributions.",
+              },
+            ].map((s) => (
+              <div key={s.stage} className="p-5 xl:p-6 rounded-xl bg-[#112733] border border-[#1C2D38] hover:border-[#2D4A5A] transition-all duration-200">
+                <div className={`w-9 h-9 rounded-lg ${s.bg} border ${s.border} flex items-center justify-center ${s.color} mb-4 font-mono font-bold text-sm`}>
+                  {s.stage}
+                </div>
+                <h3 className="text-sm font-semibold text-white mb-2">{s.title}</h3>
+                <p className="text-xs text-[#5C6C75] leading-relaxed">{s.body}</p>
               </div>
-              <h3 className="text-sm font-semibold text-white">Sinhala Normalization</h3>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Normalizes Zero-Width Joiners (ZWJ <code className="text-slate-300">\u200D</code>), removes
-                extraneous whitespace, and regularizes kombuva/al-lakuna combinations in Sinhala Unicode.
-              </p>
-            </div>
-
-            {/* Stage 2 */}
-            <div className="p-5 xl:p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition">
-              <div className="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-sky-400 mb-3 font-mono font-bold text-sm">
-                02
-              </div>
-              <h3 className="text-sm font-semibold text-white">Sub-word & Character n-grams</h3>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Extracts character 3–5 n-grams and word 1–2 n-grams with sublinear term frequency scaling to
-                capture morphological roots and political keywords.
-              </p>
-            </div>
-
-            {/* Stage 3 */}
-            <div className="p-5 xl:p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition">
-              <div className="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-3 font-mono font-bold text-sm">
-                03
-              </div>
-              <h3 className="text-sm font-semibold text-white">Decoupled Target Modeling</h3>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Independent classifiers fitted with balanced class weights for <em>Bias Direction</em> (Anti/Neutral/Pro-Gov)
-                and <em>Bias Level</em> (Neutral/Low/Med/High).
-              </p>
-            </div>
-
-            {/* Stage 4 */}
-            <div className="p-5 xl:p-6 rounded-xl bg-slate-900/50 border border-slate-800 hover:border-slate-700 transition">
-              <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3 font-mono font-bold text-sm">
-                04
-              </div>
-              <h3 className="text-sm font-semibold text-white">Platt Scaling Calibration</h3>
-              <p className="text-xs text-slate-400 mt-2 leading-relaxed">
-                Applies cross-validated probability calibration (<code className="text-slate-300 font-mono">CalibratedClassifierCV</code>)
-                so predicted probabilities reflect genuine confidence distributions.
-              </p>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* ============================================================== */}
-        {/* DATASET & SCOPE (id="dataset")                                  */}
-        {/* ============================================================== */}
-        <section id="dataset" className="scroll-mt-20 mt-16 pt-10 border-t border-slate-800/80 relative">
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        {/*  DATASET & SCOPE  (id="dataset")                               */}
+        {/* ═══════════════════════════════════════════════════════════════ */}
+        <section id="dataset" className="scroll-mt-20 mt-20 pt-12 border-t border-[#1C2D38] relative">
           <div id="channels" className="absolute -top-20 left-0 pointer-events-none" />
-          <div className="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-slate-900/90 via-slate-900/70 to-slate-950 border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-            <div className="space-y-2 max-w-3xl xl:max-w-4xl">
+
+          <div className="rounded-2xl bg-[#112733] border border-[#1C2D38] p-7 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div className="space-y-3 max-w-3xl">
               <div className="flex items-center gap-2">
-                <Layers className="w-4 h-4 text-cyan-400" />
-                <span className="text-xs font-bold uppercase tracking-wider text-slate-300">
+                <Layers className="w-4 h-4 text-[#00ED64]" />
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-[#5C6C75]">
                   Research Dataset & Ground Truth
                 </span>
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-white">
                 1,248 Annotated Sinhala Political News Records & 500-Item Benchmark Corpus
               </h3>
-              <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              <p className="text-xs text-[#5C6C75] leading-relaxed">
                 Curated from major Sri Lankan print and television news archives (Lankadeepa, Derana, Hiru, Sirasa, ITN, Rupavahini)
                 with rigorous multi-annotator validation across governance, elections, and economic policies.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 shrink-0">
-              <Button
-                asChild
-                variant="outline"
-                size="sm"
-                className="border-slate-700 bg-slate-900 hover:bg-slate-800 text-slate-200 text-xs px-4 h-9"
+            <div className="flex flex-col sm:flex-row gap-2.5 shrink-0">
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold text-[#89989F] bg-[#001E2B] border border-[#1C2D38] hover:border-[#2D4A5A] hover:text-white transition cursor-pointer"
               >
-                <Link href="/about" className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-cyan-400" />
-                  <span>Research Ethics</span>
-                </Link>
-              </Button>
-
-              <Button
-                size="sm"
+                <ShieldCheck className="w-3.5 h-3.5" />
+                Research Ethics
+              </Link>
+              <button
                 onClick={() => {
                   const elem = document.getElementById("detector");
                   elem?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs px-4 h-9 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-md text-xs font-semibold bg-[#00ED64] text-[#001E2B] hover:bg-[#00D957] transition cursor-pointer"
               >
-                <span>Back to Live Detector</span>
-                <ChevronRight className="w-3.5 h-3.5 ml-1" />
-              </Button>
+                Back to Live Detector
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
             </div>
           </div>
         </section>

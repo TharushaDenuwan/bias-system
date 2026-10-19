@@ -1,11 +1,13 @@
-import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-export const fontSans = DM_Sans({
+export const fontSans = Poppins({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-sans"
 });
 
-export const fontHeading = Bricolage_Grotesque({
+export const fontHeading = Poppins({
   subsets: ["latin"],
+  weight: ["600", "700"],
   variable: "--font-heading"
 });
