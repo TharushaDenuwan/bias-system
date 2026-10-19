@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useId } from "react";
 
 import { authClient } from "@/lib/auth-client";
-import { CheckIcon } from "lucide-react";
+import { CheckIcon, Scale } from "lucide-react";
 import { toast } from "sonner";
 import { signinSchema, type SigninSchemaT } from "../schemas";
 
@@ -66,12 +66,27 @@ export function SiginForm({
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
+      {/* MediaBias.LK Logo */}
+      <Link href="/" className="flex items-center justify-center gap-3 group">
+        <div className="w-9 h-9 rounded-lg bg-[#00ED64] flex items-center justify-center shadow-sm group-hover:bg-[#00D957] transition-colors duration-200">
+          <Scale className="w-5 h-5 text-[#001E2B]" />
+        </div>
+        <div className="flex flex-col leading-tight">
+          <span className="font-semibold text-base tracking-tight group-hover:text-[#00ED64] transition-colors duration-200">
+            MediaBias<span className="text-[#00ED64]">.LK</span>
+          </span>
+          <span className="text-[10px] text-muted-foreground font-normal tracking-wide">
+            Sri Lankan News Bias Detection
+          </span>
+        </div>
+      </Link>
+
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl font-heading font-bold">
             Welcome back
           </CardTitle>
-          <CardDescription>Signin with your Email</CardDescription>
+          <CardDescription>Sign in with your email</CardDescription>
         </CardHeader>
         <CardContent>
           <form.AppForm>

@@ -1,6 +1,7 @@
 import { Providers } from "@/modules/layouts/providers";
 import "@repo/ui/globals.css";
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Suspense } from "react";
 import { Toaster } from "sonner";
 import { fontHeading, fontSans } from "../lib/fonts";
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   const bodyClassName = `${fontSans.variable} ${fontHeading.variable} font-sans antialiased`;
 
